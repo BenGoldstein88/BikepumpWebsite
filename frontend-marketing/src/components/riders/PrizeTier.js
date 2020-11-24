@@ -18,13 +18,19 @@ export const PrizeTier = React.memo(props => {
     },
     contentContainer: {
       display: "flex",
-      justifyContent: "space-between"
+      justifyContent: "space-between",
+      alignItems: "center"
     },
     nameContainer: {
       display: "flex"
     },
     valueContainer: {
-      display: "flex"
+      display: "flex",
+      alignItems: "center"
+    },
+    icon: {
+      width: "32px",
+      height: "32px"
     }
   });
   const classes = useStyles();
@@ -42,7 +48,7 @@ export const PrizeTier = React.memo(props => {
           )}
         </div>
         <div className={classes.valueContainer}>
-          <img src={icon} />
+          <img src={icon} className={classes.icon} />
           <Typography variant="h3" className={classes.dollars}>
             ${value}
           </Typography>

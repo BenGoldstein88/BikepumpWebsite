@@ -21,7 +21,7 @@ export const JoinLaunchTeam = React.memo(props => {
     var animation = bodymovin.loadAnimation({
       container: document.getElementById("lottie"), // Required
       animationData: animationFile, // Required
-      renderer: "svg/canvas/html", // Required
+      renderer: "canvas", // Required
       loop: true, // Optional
       //   autoplay: true, // Optional
       name: "Hello World" // Name for future reference. Optional.

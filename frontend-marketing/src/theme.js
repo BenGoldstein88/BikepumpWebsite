@@ -53,6 +53,9 @@ export const defaultTheme = {
     },
     placeholder: {
       main: "#BBC1C6"
+    },
+    grey: {
+      main: "#f2f6f7"
     }
   },
   overrides: {}
