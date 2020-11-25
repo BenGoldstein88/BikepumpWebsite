@@ -56,6 +56,9 @@ export const defaultTheme = {
     },
     grey: {
       main: "#f2f6f7"
+    },
+    footer: {
+      main: "#061023"
     }
   },
   overrides: {}

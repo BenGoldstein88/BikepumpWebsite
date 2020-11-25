@@ -12,11 +12,19 @@ export const Hero = React.memo(props => {
       backgroundColor: theme.palette.primary.main,
       backgroundImage: `url(${backgroundImage})`,
       backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
       width: "100%"
     },
     text: {
       color: theme.palette.teal.main,
-      fontWeight: "bold"
+      fontWeight: "bold",
+      marginLeft: "19px"
+    },
+    rider: {
+      width: "100%",
+      maxWidth: "350px",
+      height: "auto",
+      marginLeft: "-10%"
     }
   });
   const classes = useStyles();
@@ -31,7 +39,7 @@ export const Hero = React.memo(props => {
       <Typography className={classes.text} variant="h2">
         with no extra effort.
       </Typography>
-      {/* <img className={classes.rider} src={riderImage} /> */}
+      <img className={classes.rider} src={riderImage} />
     </div>
   );
 });

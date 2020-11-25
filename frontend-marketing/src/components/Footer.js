@@ -3,13 +3,17 @@ import PropTypes from "prop-types";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import { Link, useLocation } from "react-router-dom";
+import bikepumpIcon from "../assets/bikepump-icon.svg";
 export const Footer = React.memo(props => {
   const theme = useTheme();
   const useStyles = makeStyles({
     root: {
-      backgroundColor: theme.palette.dark.main,
-      height: "50px",
-      width: "100%"
+      backgroundColor: theme.palette.footer.main,
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center"
       //   position: "absolute",
       //   bottom: "0"
     },
@@ -28,6 +32,7 @@ export const Footer = React.memo(props => {
   const isAdvertisers = location.pathname.includes("/advertisers");
   return (
     <div className={classes.root}>
+      <img src={bikepumpIcon} className={classes.icon} />
       <Typography
         className={`${classes.link} ${isAdvertisers ? classes.activeLink : ""}`}
       >

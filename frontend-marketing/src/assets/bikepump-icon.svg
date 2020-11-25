@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewBox="0 0 42 42">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.12" y1="0.092" x2="1.278" y2="1.696" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0d192e"/>
+      <stop offset="0.113" stop-color="#2d2f6a" stop-opacity="0.757"/>
+      <stop offset="0.232" stop-color="#4b43a1" stop-opacity="0.502"/>
+      <stop offset="0.335" stop-color="#6152ca" stop-opacity="0.278"/>
+      <stop offset="0.415" stop-color="#6f5be3" stop-opacity="0.106"/>
+      <stop offset="0.465" stop-color="#745eec" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.231" cy="-0.102" r="1.342" gradientTransform="translate(0.132) scale(0.736 1)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0d192e"/>
+      <stop offset="0.194" stop-color="#2b2d66" stop-opacity="0.773"/>
+      <stop offset="0.417" stop-color="#4a429f" stop-opacity="0.51"/>
+      <stop offset="0.609" stop-color="#6151c9" stop-opacity="0.282"/>
+      <stop offset="0.759" stop-color="#6f5be2" stop-opacity="0.106"/>
+      <stop offset="0.849" stop-color="#745eec" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_3700" data-name="Group 3700" transform="translate(-59.611 -5209.611)">
+    <rect id="Rectangle_729" data-name="Rectangle 729" width="42" height="42" rx="8" transform="translate(59.611 5209.611)" fill="#2e30e0"/>
+    <g id="Labels" transform="translate(72.367 5216.183)">
+      <path id="Path_24" data-name="Path 24" d="M16.544,14.815a8.225,8.225,0,0,0-2.37-5.772A8.129,8.129,0,0,0,11,7.095L14.71,3.387a.416.416,0,0,0,0-.573h0l-2.6-2.6h0a.416.416,0,0,0-.573,0L2.67,9.082A8.064,8.064,0,0,0,.3,14.854a8.225,8.225,0,0,0,2.37,5.772L11.5,29.493a.416.416,0,0,0,.573,0h0l2.6-2.6h0a.416.416,0,0,0,0-.573l-3.708-3.708a8.129,8.129,0,0,0,3.172-1.949A8.344,8.344,0,0,0,16.544,14.815Zm-5.58,2.561a3.622,3.622,0,0,1-5.122,0,3.685,3.685,0,0,1-1.07-2.561,3.631,3.631,0,0,1,6.192-2.561,3.685,3.685,0,0,1,1.07,2.561A3.786,3.786,0,0,1,10.964,17.376Z" transform="translate(-0.3 -0.1)" fill="#fff"/>
+      <path id="Path_25" data-name="Path 25" d="M19.922,23.56a3.685,3.685,0,0,1,1.07,2.561H25.5a8.225,8.225,0,0,0-2.37-5.772A8.129,8.129,0,0,0,19.96,18.4L14.8,23.56A3.622,3.622,0,0,1,19.922,23.56Z" transform="translate(-9.258 -11.405)" fill="url(#linear-gradient)"/>
+      <path id="Path_26" data-name="Path 26" d="M15.2,56.12a8.231,8.231,0,0,1-2.6.42A8.048,8.048,0,0,1,7.1,54.4c1.414,1.414,8.6,8.638,8.6,8.638a.416.416,0,0,0,.573,0h0l2.6-2.6h0a.416.416,0,0,0,0-.573Z" transform="translate(-4.501 -33.645)" fill="url(#radial-gradient)"/>
+    </g>
+  </g>
+</svg>

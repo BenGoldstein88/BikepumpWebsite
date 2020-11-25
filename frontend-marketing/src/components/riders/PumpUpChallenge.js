@@ -51,7 +51,7 @@ export const PumpUpChallenge = React.memo(props => {
           name="Sprinters"
           icon={silverIcon}
           value={100}
-          number={9}
+          number={5}
           description={"Be in the Top 10 at the end of the week and earn $100."}
         />
         <PrizeTier

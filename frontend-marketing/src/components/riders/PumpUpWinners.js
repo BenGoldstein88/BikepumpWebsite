@@ -6,7 +6,8 @@ import {
   TableRow,
   TableCell,
   CircularProgress,
-  Avatar
+  Avatar,
+  Typography
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 export const PumpUpWinners = React.memo(props => {
@@ -37,17 +38,27 @@ export const PumpUpWinners = React.memo(props => {
       display: "flex",
       //   justifyContent: "center",
       alignItems: "center"
+    },
+    rewardContainer: {
+      display: "flex",
+      alignItems: "center"
     }
   });
   const classes = useStyles();
+
+  const parsePumpSeconds = pumpSeconds => {
+    const hours = Math.floor(pumpSeconds / 3600);
+    const minutes = Math.floor((pumpSeconds - hours * 3600) / 60);
+    return `${hours > 0 && `${hours}h `}${minutes > 0 && `${minutes}m`}`;
+  };
   return (
     <div>
       <Table className={classes.table}>
         <TableBody>
           {!isFetching &&
-            rows.map(row => {
+            rows.map((row, i) => {
               return (
-                <TableRow>
+                <TableRow key={i}>
                   <TableCell className={classes.tableCell}>
                     {row.ranking}
                   </TableCell>
@@ -58,10 +69,15 @@ export const PumpUpWinners = React.memo(props => {
                     </span>
                   </TableCell>
                   <TableCell className={classes.tableCell}>
-                    {row.pumpSeconds}
+                    {parsePumpSeconds(row.pumpSeconds)}
                   </TableCell>
                   <TableCell className={classes.tableCell}>
-                    <img src={row.rewardBadgeUrl} />
+                    <span className={classes.rewardContainer}>
+                      <img src={row.rewardBadgeUrl} />
+                      {row.paidAmount && (
+                        <Typography>${row.paidAmount}</Typography>
+                      )}
+                    </span>
                   </TableCell>
                 </TableRow>
               );

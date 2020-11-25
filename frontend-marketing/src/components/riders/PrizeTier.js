@@ -22,7 +22,8 @@ export const PrizeTier = React.memo(props => {
       alignItems: "center"
     },
     nameContainer: {
-      display: "flex"
+      display: "flex",
+      alignItems: "center"
     },
     valueContainer: {
       display: "flex",
@@ -38,6 +39,8 @@ export const PrizeTier = React.memo(props => {
     <div className={classes.root}>
       <div className={classes.contentContainer}>
         <div className={classes.nameContainer}>
+          <img src={icon} className={classes.icon} />
+
           <Typography variant="h3" className={classes.headerText}>
             {name}
           </Typography>
@@ -48,7 +51,6 @@ export const PrizeTier = React.memo(props => {
           )}
         </div>
         <div className={classes.valueContainer}>
-          <img src={icon} className={classes.icon} />
           <Typography variant="h3" className={classes.dollars}>
             ${value}
           </Typography>

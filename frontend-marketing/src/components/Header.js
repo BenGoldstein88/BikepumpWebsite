@@ -4,6 +4,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Typography, Button, IconButton } from "@material-ui/core";
 import { HeaderDrawer } from "./HeaderDrawer";
 import MenuIcon from "@material-ui/icons/Menu";
+import logo from "../assets/Bikepump-Logo.svg";
 export const Header = React.memo(props => {
   const theme = useTheme();
   const useStyles = makeStyles({
@@ -13,13 +14,18 @@ export const Header = React.memo(props => {
       width: "100%",
       display: "flex",
       justifyContent: "space-between",
-      alignItems: "center"
+      alignItems: "center",
+      padding: "40px 0px"
     },
     icon: {
-      color: "white"
+      color: "white",
+      marginRight: "19px"
     },
     text: {
       color: "white"
+    },
+    logo: {
+      marginLeft: "19px"
     }
   });
   const classes = useStyles();
@@ -32,9 +38,11 @@ export const Header = React.memo(props => {
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleIconClick = () => {};
   return (
     <div className={classes.root}>
-      <Typography className={classes.text}>bikepump</Typography>
+      <img className={classes.logo} src={logo} />
       <IconButton className={classes.icon} onClick={handleButtonClick}>
         <MenuIcon />
       </IconButton>
