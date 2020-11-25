@@ -13,15 +13,23 @@ export const Footer = React.memo(props => {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      alignItems: "center"
+      alignItems: "center",
+      paddingBottom: "72px",
+      paddingTop: "64px"
       //   position: "absolute",
       //   bottom: "0"
     },
     link: {
-      color: "white"
+      color: "white",
+      margin: "8px 0"
     },
     activeLink: {
-      textDecoration: "underline"
+      //   textDecoration: "underline"
+      borderBottom: `1px solid ${theme.palette.body.main}`,
+      paddingBottom: "4px"
+    },
+    icon: {
+      marginBottom: "8px"
     }
   });
   const classes = useStyles();

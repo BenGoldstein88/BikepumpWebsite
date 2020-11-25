@@ -9,8 +9,8 @@ import { PumpUpChallenge } from "../components/riders/PumpUpChallenge";
 import { DownloadApp } from "../components/riders/DownloadApp";
 import { PumpUpWinners } from "../components/riders/PumpUpWinners";
 import { FAQ } from "../components/riders/FAQ";
-import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
-
+// import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
+import { Parallax } from "react-scroll-parallax";
 export const Riders = React.memo(props => {
   const theme = useTheme();
   const useStyles = makeStyles({});

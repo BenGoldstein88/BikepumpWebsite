@@ -5,6 +5,7 @@ import { Riders } from "./pages/Riders";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import { defaultTheme } from "./theme";
 
@@ -13,13 +14,15 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Header />
-        <Switch>
-          <Route path="/riders" component={Riders} />
-        </Switch>
-        <Footer />
-      </Router>
+      <ParallaxProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route path="/riders" component={Riders} />
+          </Switch>
+          <Footer />
+        </Router>
+      </ParallaxProvider>
     </ThemeProvider>
   );
 }

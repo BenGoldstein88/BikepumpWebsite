@@ -31,7 +31,7 @@ export const Hero = React.memo(props => {
   return (
     <div className={classes.root}>
       <Typography className={classes.text} variant="h2">
-        Delivery Riders,
+        Delivery Riders –
       </Typography>
       <Typography className={classes.text} variant="h2">
         earn more money

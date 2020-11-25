@@ -16,7 +16,8 @@ export const PumpUpChallenge = React.memo(props => {
       alignItems: "center",
       justifyContent: "center",
       flexDirection: "column",
-      backgroundColor: theme.palette.grey.main
+      backgroundColor: theme.palette.grey.main,
+      margin: "0 8px"
     },
     fineprint: {},
     trophyImage: {
@@ -26,8 +27,14 @@ export const PumpUpChallenge = React.memo(props => {
     challengeText: {
       position: "absolute",
       left: "16px",
-      top: "24px",
+      top: "32px",
       fontWeight: "bold"
+    },
+    challengeSubtext: {
+      position: "absolute",
+      left: "16px",
+      top: "60px",
+      color: theme.palette.body.main
     }
   });
   const classes = useStyles();
@@ -36,6 +43,9 @@ export const PumpUpChallenge = React.memo(props => {
       <Typography variant="h3" className={classes.challengeText}>
         PumpUp Challenge
       </Typography>
+      <Typography variant="body1" className={classes.challengeSubtext}>
+        Challenge subtext goes here
+      </Typography>
       <img src={coverIcons} className={classes.trophyImage} />
       <div>
         <PrizeTier
@@ -43,16 +53,14 @@ export const PumpUpChallenge = React.memo(props => {
           icon={goldIcon}
           value={200}
           number={1}
-          description={
-            "The rider with the most hours at the end of the week will earn $200 and prove to be one of New York's top riders."
-          }
+          description={"1st Place rider of the week. There can be only one."}
         />
         <PrizeTier
           name="Sprinters"
           icon={silverIcon}
           value={100}
           number={5}
-          description={"Be in the Top 10 at the end of the week and earn $100."}
+          description={"The 5 runners-up get $100 each."}
         />
         <PrizeTier
           name="Lucky Ducks"
@@ -60,13 +68,14 @@ export const PumpUpChallenge = React.memo(props => {
           value={50}
           number={10}
           description={
-            "10 lucky ducks will be randomly chosen every Sunday to win $50 each."
+            "10 randomly chosen riders who pumped at least 10 hours."
           }
+          noDivider
         />
-        <Typography variant="body2" className={classes.fineprint}>
+        {/* <Typography variant="body2" className={classes.fineprint}>
           A minimum of 3h ride time is required to be eligible for a Lucky Duck
           prize.
-        </Typography>
+        </Typography> */}
       </div>
     </div>
   );

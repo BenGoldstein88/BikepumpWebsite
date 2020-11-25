@@ -32,7 +32,11 @@ export const DownloadApp = React.memo(props => {
     },
     headerText: {
       color: theme.palette.primary.dark,
-      fontWeight: "bold"
+      fontWeight: "bold",
+      margin: "12px 19px"
+    },
+    subtext: {
+      margin: "12px 19px"
     },
     phoneImage: {
       width: "40%",
@@ -40,7 +44,8 @@ export const DownloadApp = React.memo(props => {
       marginTop: "-11%"
     },
     appStoreButton: {
-      visibility: isInView ? "hidden" : "visible"
+      visibility: isInView ? "visible" : "hidden",
+      margin: "60px 19px"
     },
     appStoreButtonFixed: {
       margin: "8px"
@@ -48,8 +53,9 @@ export const DownloadApp = React.memo(props => {
     fixedButtonContainer: {
       position: "fixed",
       bottom: 0,
-      visibility: isInView ? "visible" : "hidden",
-      zIndex: 999999999,
+      visibility: isInView ? "hidden" : "visible",
+
+      zIndex: 999998,
       borderTopLeftRadius: "15px",
       borderTopRightRadius: "15px",
       backgroundColor: theme.palette.active.variant,
@@ -57,14 +63,18 @@ export const DownloadApp = React.memo(props => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center"
+    },
+    noWrap: {
+      whiteSpace: "nowrap"
     }
   });
   const classes = useStyles();
   const isBottom = element => {
-    console.log("ELEMENT RECT", element.getBoundingClientRect());
-    console.log("WINDOW HEIGHT", window.innerHeight);
-    return element.getBoundingClientRect().bottom + 20 <= window.innerHeight;
+    if (!element) return false;
+    if (element.getBoundingClientRect().bottom < 0) return false;
+    return element.getBoundingClientRect().bottom <= window.innerHeight;
   };
+
   const trackScrolling = () => {
     const wrappedElement = document.getElementById("downloadButton");
     if (isBottom(wrappedElement)) {
@@ -72,6 +82,7 @@ export const DownloadApp = React.memo(props => {
       // document.removeEventListener("scroll", trackScrolling);
       setIsInView(true);
     } else {
+      console.log("NONT SIG NTHE BOTTOM");
       setIsInView(false);
     }
   };
@@ -81,11 +92,16 @@ export const DownloadApp = React.memo(props => {
       <div className={classes.content}>
         <img src={iPhoneImage} className={classes.phoneImage} />
         <Typography variant="h2" className={classes.headerText}>
-          Download the app, start earning.
+          Download the app – Play PumpUp Today
         </Typography>
-        <Typography variat="body1">
-          Download app, set location permission, and ride your usual routes and
-          schedule.
+        <Typography variant="body1" className={classes.subtext}>
+          Earn more money with no extra effort.
+        </Typography>
+        <Typography
+          variant="body1"
+          className={`${classes.subtext} ${classes.noWrap}`}
+        >
+          Be cool. Stay safe.
         </Typography>
         <img
           id="downloadButton"

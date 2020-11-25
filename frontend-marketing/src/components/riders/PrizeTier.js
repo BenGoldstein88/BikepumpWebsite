@@ -3,15 +3,20 @@ import PropTypes from "prop-types";
 import { Typography, Divider } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 export const PrizeTier = React.memo(props => {
-  const { name, number, icon, value, description } = props;
+  const { name, number, icon, value, description, noDivider } = props;
   const theme = useTheme();
   const useStyles = makeStyles({
+    root: {
+      padding: "24px 16px 0 16px"
+    },
     headerText: {
-      fontWeight: "bold"
+      fontWeight: "bold",
+      marginLeft: "8px"
     },
     number: {
       fontWeight: "bold",
-      color: theme.palette.placeholder.main
+      color: theme.palette.placeholder.main,
+      marginLeft: "8px"
     },
     dollars: {
       fontWeight: "bold"
@@ -32,6 +37,12 @@ export const PrizeTier = React.memo(props => {
     icon: {
       width: "32px",
       height: "32px"
+    },
+    divider: {},
+    subtext: {
+      marginTop: "12px",
+      marginBottom: "24px",
+      color: theme.palette.body.main
     }
   });
   const classes = useStyles();
@@ -56,8 +67,10 @@ export const PrizeTier = React.memo(props => {
           </Typography>
         </div>
       </div>
-      <Typography variant="body1">{description}</Typography>
-      <Divider />
+      <Typography variant="body1" className={classes.subtext}>
+        {description}
+      </Typography>
+      {!noDivider && <Divider className={classes.divider} />}
     </div>
   );
 });

@@ -20,3 +20,19 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+/* MUI customizations */
+.Mui-expanded .addIcon {
+  display: none;
+}
+.Mui-expanded .removeIcon {
+  display: block;
+}
+
+.MuiAccordionSummary-root.Mui-expanded {
+  border-bottom: none;
+}
+
+/* .MuiAccordionSummary-root:last-child {
+  border-bottom: none;
+} */
